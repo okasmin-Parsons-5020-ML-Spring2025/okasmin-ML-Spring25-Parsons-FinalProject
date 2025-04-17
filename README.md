@@ -1,6 +1,6 @@
 # okasmin-ML-Spring25-Parsons-FinalProject
 
-## Idea 1 - Ceramic Vessel Forms in the Metropolitan Museum of Art Collection
+## Ceramic Vessel Forms in the Metropolitan Museum of Art Collection
 
 ### Concept
 
