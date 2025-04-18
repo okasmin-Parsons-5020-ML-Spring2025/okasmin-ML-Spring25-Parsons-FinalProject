@@ -2,11 +2,7 @@ import axios from "axios";
 import fs from "fs";
 import path from "path";
 
-import { testOutputFolder, testObjectId } from "./utils.js";
-
-const createUrl = (id) => {
-  return `https://collectionapi.metmuseum.org/public/collection/v1/objects/${id}`;
-};
+import { createObjectUrl, testOutputFolder, testObjectId } from "./utils.js";
 
 /**
  * function to handle downloading & saving image from object data response
@@ -64,7 +60,7 @@ export const fetchObjectData = async ({ objectId, imageFolder }) => {
   }
 
   try {
-    const url = createUrl(objectId);
+    const url = createObjectUrl(objectId);
     const { data } = await axios.get(url);
 
     const imageUrl = data.primaryImageSmall || data.primaryImage;
@@ -73,6 +69,8 @@ export const fetchObjectData = async ({ objectId, imageFolder }) => {
       console.log(`No image found for object ${objectId}`);
       return;
     }
+
+    // console.log({ imageUrl });
 
     fetchImage({ objectId, imageFolder, imageUrl });
 

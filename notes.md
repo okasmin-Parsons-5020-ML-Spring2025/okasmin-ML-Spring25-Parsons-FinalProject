@@ -7,13 +7,13 @@ example call single object: https://collectionapi.metmuseum.org/public/collectio
 ---
 
 js
-[] function to download image given object id - use primaryImageSmall field
-[] download ~10 images to start - save to "data/initial_test/original" - name "objectId_original"
+[x] function to download image given object id - use primaryImageSmall field
 
 python
-[] save copy of all images b&w - probably up the contrast
-[] explore possible models
-[] save copy of each image with background removed to "data/initial_test/bw" - name "objectId_bw"
+[x] make images bw --> may not need this for models, didn't save new image files
+[x] explore BRIA model --> success
+[x] explore BiRefNet model --> failed
+[x] save copy of image with background removed --> did this from BRIA model
 
 ---
 
@@ -22,6 +22,11 @@ js
 [] save data for 1000 objects to df / json
 
 python
-[] repeat process above for all 1000 images
+[] save mask/ bg removed version for all 1000 images
+[] find way to compare, group, cluster, etc. the forms
 
 ---
+
+things to consider
+
+- disregard "fragment" pieces? ex - title: "Ceramic Fragment",
