@@ -51,9 +51,41 @@ const fetchImage = async ({ objectId, imageFolder, imageUrl }) => {
 };
 
 /**
+ * function to append objectId and imageUrl to json file
+ */
+const appendImageEntry = ({ objectId, imageUrl, filePath }) => {
+  fs.readFile(filePath, "utf8", (err, data) => {
+    let jsonArray;
+
+    if (!err && data) {
+      try {
+        jsonArray = JSON.parse(data);
+        if (!jsonArray) {
+          jsonArray = [];
+        }
+      } catch (parseErr) {
+        console.error("Error parsing JSON:", parseErr);
+        return;
+      }
+    }
+
+    // Add new entry
+    jsonArray.push({ objectId, imageUrl });
+
+    fs.writeFile(filePath, JSON.stringify(jsonArray, null, 2), (err) => {
+      if (err) {
+        console.error("Error writing JSON:", err);
+      } else {
+        // console.log(`Saved entry for ${objectId}`);
+      }
+    });
+  });
+};
+
+/**
  * function to fetch object data json
  */
-export const fetchObjectData = async ({ objectId, imageFolder }) => {
+export const fetchObjectData = async ({ objectId, imageFolder, filePath }) => {
   if (!objectId || !imageFolder) {
     console.log("missing object id or imageFolder path");
     return;
@@ -70,9 +102,12 @@ export const fetchObjectData = async ({ objectId, imageFolder }) => {
       return;
     }
 
+    // save image URL to file - needed for BRIA model
     // console.log({ imageUrl });
+    appendImageEntry({ objectId, imageUrl, filePath });
 
-    fetchImage({ objectId, imageFolder, imageUrl });
+    // save original image to folder
+    // fetchImage({ objectId, imageFolder, imageUrl });
 
     // TODO - handle other object data here in future
   } catch (err) {
@@ -84,4 +119,4 @@ export const fetchObjectData = async ({ objectId, imageFolder }) => {
 /**
  * test call
  */
-fetchObjectData({ objectId: testObjectId, imageFolder: testOutputFolder });
+// fetchObjectData({ objectId: testObjectId, imageFolder: testOutputFolder });
