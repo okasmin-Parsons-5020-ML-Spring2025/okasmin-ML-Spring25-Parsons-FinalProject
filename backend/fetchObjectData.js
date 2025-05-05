@@ -10,7 +10,7 @@ import {
   testUrlFile,
 } from "./utils.js";
 
-import { addObjectToDb, checkForId } from "./db.js";
+import { addObjectToDb, checkForId, addObjErr } from "./db.js";
 
 /**
  * function to fetch object data and save to json
@@ -35,7 +35,8 @@ export const fetchObjectData = async ({ objectId }) => {
 
     // filter out any that don't have an image
     if (!imageUrl) {
-      console.log(`No image found for object ${objectId}`);
+      // console.log(`No image found for object ${objectId}`);
+      addObjErr(objectId);
       return;
     }
 
@@ -43,8 +44,9 @@ export const fetchObjectData = async ({ objectId }) => {
     const object = { objectId, imageUrl, data };
     await addObjectToDb(object);
   } catch (err) {
-    console.log("!!!error!!! ");
-    console.error(err);
+    // console.log("!!!error!!! ");
+    // console.error(err);
+    addObjErr(objectId);
   }
 };
 
@@ -52,6 +54,7 @@ export const fetchObjectData = async ({ objectId }) => {
  * test calls
  */
 // fetchObjectData({ objectId: testObjectId });
+fetchObjectData({ objectId: 854800 });
 
 // for (const objectId of testObjectIds) {
 //   fetchObjectData({ objectId  });

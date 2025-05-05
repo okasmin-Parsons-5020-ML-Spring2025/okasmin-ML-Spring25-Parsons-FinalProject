@@ -24,4 +24,4 @@ const runBatch = async (objectIds) => {
   console.log("✅ All ids processed");
 };
 
-// runBatch(ids.slice(400, 500));
+runBatch(ids);
