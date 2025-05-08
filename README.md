@@ -1,5 +1,11 @@
 # okasmin-ML-Spring25-Parsons-FinalProject
 
+run frontend:
+
+```
+npm run dev
+```
+
 ## Ceramic Vessel Forms in the Metropolitan Museum of Art Collection
 
 ### Concept
@@ -26,7 +32,7 @@ I’m envisioning training a model to select the primary form from an image (ign
 
 The images are all relatively consistent in the way they’re photographed, though some are in B&W and some are in color. Since this model will focus on form, I’ll likely convert all images to B&W.
 
-I’m not sure how prescriptive I will have to be to determine what “similar” means—it could be interesting to fiddle with a parameter that determines *how* similar forms must be to be grouped together, or perhaps to tell the model how many groups it should return. These types of adjustments should hopefully present different patterns and trends.
+I’m not sure how prescriptive I will have to be to determine what “similar” means—it could be interesting to fiddle with a parameter that determines _how_ similar forms must be to be grouped together, or perhaps to tell the model how many groups it should return. These types of adjustments should hopefully present different patterns and trends.
 
 I might consider putting together a training dataset with a limited number of images that will be relatively easy for me to evaluate visually as I fine-tune the model.
 
@@ -37,7 +43,6 @@ I might consider putting together a training dataset with a limited number of im
 <img width="338" alt="Screenshot 2025-04-01 at 2 06 54 PM" src="https://github.com/user-attachments/assets/f2a85a60-d518-4bde-af44-a8ff2baa0bc7" />
 <img width="324" alt="Screenshot 2025-04-01 at 2 05 20 PM" src="https://github.com/user-attachments/assets/55decde5-0860-41d1-a66b-612790821e1e" />
 <img width="321" alt="Screenshot 2025-04-01 at 2 05 46 PM" src="https://github.com/user-attachments/assets/f6bed73a-ef25-4d9e-9693-467a6c41c44b" />
-
 
 Sources:
 

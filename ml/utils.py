@@ -8,23 +8,6 @@ import matplotlib.pyplot as plt
 import json
 import pandas as pd
 
-
-###########################
-# GET AND SAVE BRIA IMAGES
-###########################
-
-
-
-
-
-
-
-
-
-#########################
-# ARRANGE IMAGES
-#########################
-
 # save list of sorted images to json for frontend
 def save_to_json(sorted_arr, output_path = '../public/data/sortedImages.json'):
     with open(output_path, 'w') as f:
@@ -55,8 +38,7 @@ def is_valid_mask(image_path, max_fill_ratio=0.65):
 
 
 
-
-#### STEP 1 - NORMALIZE ####
+#### NORMALIZE BRIA images ####
 def normalize_image_to_pixel_array(image_path, output_size=(400, 400)):
     img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
     _, binary = cv2.threshold(img, 128, 255, cv2.THRESH_BINARY)
@@ -85,7 +67,7 @@ def normalize_image_to_pixel_array(image_path, output_size=(400, 400)):
     return img_array.flatten().tolist() 
 
 
-#### optional - display image to check ####
+#### optional - display image to check normalized result ####
 def get_display_normalized_image(path):
     norm = normalize_image_to_pixel_array(path)
 
@@ -102,7 +84,7 @@ def get_display_normalized_image(path):
 
 
 
-#### STEP 2 - GET IMAGES PCA ####
+#### GET IMAGES PCA ####
 def get_images_pca(folder_path='../public/data/images'):
     # Step 1: Load and normalize images
     all_files = sorted(os.listdir(folder_path))
@@ -121,13 +103,26 @@ def get_images_pca(folder_path='../public/data/images'):
 
 
 
+#### KMeans clustering of PCA images ####
+def cluster_pca_images(pca_df, valid_image_paths, n_clusters=10):
+
+    kmeans = KMeans(n_clusters=n_clusters, random_state=0)
+    cluster_labels = kmeans.fit_predict(pca_df)
+
+    # Group filenames by cluster
+    clustered_results = {
+        cluster: [] for cluster in range(n_clusters)
+    }
+
+    for i, label in enumerate(cluster_labels):
+        clustered_results[label].append(os.path.basename(valid_image_paths[i]))
+
+    return clustered_results
 
 
-#########################
-# ATTEMPT 1 START
-#########################
 
 
+#### not using this function in final code ####
 # get hu moments
 def extract_hu_moments(image_path, output_size=(128, 128)):
     img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
@@ -159,6 +154,7 @@ def extract_hu_moments(image_path, output_size=(128, 128)):
 
 
 
+#### not using this function in final code ####
 # attempt to sort image shapes by on hu moments
 # return an array with image names in order
 def sort_images(folder_path):
@@ -182,14 +178,6 @@ def sort_images(folder_path):
 
     return sorted_filenames
 
-
-
-
-
-
-#########################
-# ATTEMPT 1 END
-#########################
 
 
 

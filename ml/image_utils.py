@@ -1,3 +1,6 @@
+# from Thiago Hersan - thiagohersan
+# https://github.com/PSAM-5020-2025S-A/5020-utils/raw/main/src/image_utils.py
+
 import numpy as np
 import PIL.Image as PImage
 
