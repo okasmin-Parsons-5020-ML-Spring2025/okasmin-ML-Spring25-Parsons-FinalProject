@@ -1,6 +1,6 @@
 import axios from "axios";
 import fs from "fs";
-import { objectIdsFile } from "./utils.js";
+import { objectIdsFile, objectIdsFile2 } from "./utils.js";
 
 /**
  * function to save array of object ids to json file
@@ -20,8 +20,11 @@ const saveObjectIds = ({ ids, filePath }) => {
  *  only need to run this once if allObjectIds.json is empty!!
  */
 const getObjectIds = async () => {
+  // const url =
+  //   "https://collectionapi.metmuseum.org/public/collection/v1/search?material=Ceramics&hasImages=true&isOnView=true&isPublicDomain=true&q=vase";
+
   const url =
-    "https://collectionapi.metmuseum.org/public/collection/v1/search?material=Ceramics&hasImages=true&isOnView=true&isPublicDomain=true&q=vase";
+    "https://collectionapi.metmuseum.org/public/collection/v1/search?material=Ceramics&hasImages=true&isPublicDomain=true&q=vase";
 
   try {
     const res = await axios.get(url);
@@ -32,7 +35,8 @@ const getObjectIds = async () => {
     console.log(objectIds);
 
     if (total && total > 0 && objectIds && objectIds.length > 0) {
-      saveObjectIds({ ids: objectIds, filePath: objectIdsFile });
+      // saveObjectIds({ ids: objectIds, filePath: objectIdsFile });
+      saveObjectIds({ ids: objectIds, filePath: objectIdsFile2 });
     }
   } catch (err) {
     console.log("!!!error!!! ");

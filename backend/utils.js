@@ -8,6 +8,7 @@ export const createObjectUrl = (id) => {
  * REAL variables
  */
 export const objectIdsFile = "public/data/allObjectIds.json";
+export const objectIdsFile2 = "public/data/allObjectIds2.json";
 
 /**
  * TEST variables

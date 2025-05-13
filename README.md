@@ -6,6 +6,22 @@ run frontend:
 npm run dev
 ```
 
+get data:
+
+1. get object IDs: run in terminal `node backend/fetchObjects.js`
+2. get object data: run in terminal `node backend/saveAllObjectsData.js`
+3. check number of objects saved: run in terminal: `node backend/db.js`
+
+process images:
+
+1. get silhouette images: run jupyter notebook `ml/BRIA.ipynb`
+2. get images PCA clustered order: run jupyter notebook `ml/process_images.ipynb`
+
+display images on FE:
+
+1. see `src/main.js`
+2. start frontend: run in terminal `npm run dev`
+
 ## Ceramic Vessel Forms in the Metropolitan Museum of Art Collection
 
 ### Concept

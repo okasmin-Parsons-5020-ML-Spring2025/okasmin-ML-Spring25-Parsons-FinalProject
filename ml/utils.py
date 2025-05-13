@@ -8,6 +8,12 @@ import matplotlib.pyplot as plt
 import json
 import pandas as pd
 
+import re
+import json
+# import os
+from scipy.spatial.distance import pdist, squareform
+# import numpy as np
+
 # save list of sorted images to json for frontend
 def save_to_json(sorted_arr, output_path = '../public/data/sortedImages.json'):
     with open(output_path, 'w') as f:
@@ -102,9 +108,8 @@ def get_images_pca(folder_path='../public/data/images'):
     return pca_df, valid_image_paths
 
 
-
-#### KMeans clustering of PCA images ####
-def cluster_pca_images(pca_df, valid_image_paths, n_clusters=10):
+#### KMeans clustering of PCA images
+def cluster_pca_images(pca_df, valid_image_paths, n_clusters=25):
 
     kmeans = KMeans(n_clusters=n_clusters, random_state=0)
     cluster_labels = kmeans.fit_predict(pca_df)
@@ -118,6 +123,31 @@ def cluster_pca_images(pca_df, valid_image_paths, n_clusters=10):
         clustered_results[label].append(os.path.basename(valid_image_paths[i]))
 
     return clustered_results
+
+
+
+
+#### Get list of any images that are too similar to others (ie likely a pair of vases)
+### Remove from final cluster list
+def get_filenames_to_remove(pca_df, valid_image_paths, threshold=0.005):
+    features = pca_df.values
+    dist_array = pdist(features, metric='cosine')
+    dist_matrix = squareform(dist_array)
+
+    np.fill_diagonal(dist_matrix, np.inf)
+    to_remove = set()
+    already_removed = set()
+
+    for i in range(len(dist_matrix)):
+        for j in range(i + 1, len(dist_matrix)):
+            if dist_matrix[i, j] < threshold:
+                if i not in already_removed and j not in already_removed:
+                    # Remove one of the two (e.g., j)
+                    to_remove.add(j)
+                    already_removed.add(j)
+
+    filenames_to_remove = [os.path.basename(valid_image_paths[i]) for i in sorted(to_remove)]
+    return filenames_to_remove
 
 
 

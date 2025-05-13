@@ -1,5 +1,5 @@
 import fs from "fs";
-import { objectIdsFile } from "./utils.js";
+import { objectIdsFile, objectIdsFile2 } from "./utils.js";
 import pLimit from "p-limit";
 import { fetchObjectData } from "./fetchObjectData.js";
 
@@ -9,7 +9,7 @@ const limit = pLimit(concurrencyLimit);
 /**
  * read object ids list
  */
-const jsonData = fs.readFileSync(objectIdsFile);
+const jsonData = fs.readFileSync(objectIdsFile2);
 const ids = JSON.parse(jsonData);
 
 // console.log(ids.slice(0, 10));
@@ -24,4 +24,11 @@ const runBatch = async (objectIds) => {
   console.log("✅ All ids processed");
 };
 
-runBatch(ids);
+/**
+ * objectIdsFile2 contains 26865
+ * aiming to get about 1000-2000 total so going to slice this
+ */
+
+const ids2 = ids.slice(1000, 3000);
+
+runBatch(ids2);

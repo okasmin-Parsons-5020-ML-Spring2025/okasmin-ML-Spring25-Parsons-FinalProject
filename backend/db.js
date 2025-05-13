@@ -47,4 +47,4 @@ export const checkForId = (id, test = true) => {
   return false;
 };
 
-// console.log(db.data.objects.length);
+console.log(db.data.objects.length);

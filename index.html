@@ -8,16 +8,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100..900&family=Encode+Sans:wght@100..900&display=swap"
       rel="stylesheet"
     />
+
     <title>Silhouettes</title>
   </head>
   <body>
     <div id="app">
-      <h1>Silhouettes</h1>
-      <h2>Ceramic Vases in the Collection of the Metropolitan Museum of Art</h2>
-      <div id="image-container"></div>
+      <div id="poster">
+        <h1>Silhouettes</h1>
+        <h2>Ceramic Vases in the Collection of the Metropolitan Museum of Art</h2>
+        <!-- <div id="image-container"></div> -->
+        <div id="grid-container"></div>
+      </div>
+      <div id="modal" class="hidden">
+        <div id="modal-content">
+          <div class="image-caption-container">
+            <div class="modal-image-container">
+              <img id="modal-image-1" class="modal-image" src="" alt="Pair Image 1" />
+            </div>
+
+            <div id="caption-1" class="caption"></div>
+          </div>
+          <div class="image-caption-container">
+            <div class="modal-image-container">
+              <img id="modal-image-2" class="modal-image" src="" alt="Pair Image 2" />
+            </div>
+            <div id="caption-2" class="caption"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <script async type="module" src="src/main.js"></script>
   </body>

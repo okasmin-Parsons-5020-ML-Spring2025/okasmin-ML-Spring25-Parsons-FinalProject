@@ -1,0 +1,326 @@
+[
+  {
+    "objectId1": 19903,
+    "objectId2": 446217,
+    "distance": 0.010760293792216657,
+    "department1": "The American Wing",
+    "department2": "Islamic Art",
+    "date1": "ca. 1898\u20131918",
+    "date2": "last quarter 11th or 12th century"
+  },
+  {
+    "objectId1": 20053,
+    "objectId2": 45932,
+    "distance": 0.012502687330728346,
+    "department1": "The American Wing",
+    "department2": "Asian Art",
+    "date1": "1886",
+    "date2": "late 18th\u2013first half of the 19th century"
+  },
+  {
+    "objectId1": 42251,
+    "objectId2": 623442,
+    "distance": 0.013593505793938032,
+    "department1": "Asian Art",
+    "department2": "European Sculpture and Decorative Arts",
+    "date1": "mid-18th century",
+    "date2": "ca. 1690\u20131720"
+  },
+  {
+    "objectId1": 191213,
+    "objectId2": 48204,
+    "distance": 0.014794569606856212,
+    "department1": "European Sculpture and Decorative Arts",
+    "department2": "Asian Art",
+    "date1": "early 18th century",
+    "date2": "12th\u201313th century"
+  },
+  {
+    "objectId1": 62573,
+    "objectId2": 9317,
+    "distance": 0.015315895572519223,
+    "department1": "Asian Art",
+    "department2": "The American Wing",
+    "date1": "18th century",
+    "date2": "1882"
+  },
+  {
+    "objectId1": 48773,
+    "objectId2": 623476,
+    "distance": 0.015342322829119404,
+    "department1": "Asian Art",
+    "department2": "European Sculpture and Decorative Arts",
+    "date1": "18th century",
+    "date2": "ca. 1690\u20131720"
+  },
+  {
+    "objectId1": 42250,
+    "objectId2": 623442,
+    "distance": 0.015559611270658302,
+    "department1": "Asian Art",
+    "department2": "European Sculpture and Decorative Arts",
+    "date1": "mid-18th century",
+    "date2": "ca. 1690\u20131720"
+  },
+  {
+    "objectId1": 57369,
+    "objectId2": 9414,
+    "distance": 0.018641603027915954,
+    "department1": "Asian Art",
+    "department2": "The American Wing",
+    "date1": "early 20th century",
+    "date2": "1893\u201396"
+  },
+  {
+    "objectId1": 48645,
+    "objectId2": 9327,
+    "distance": 0.018750319691130946,
+    "department1": "Asian Art",
+    "department2": "The American Wing",
+    "date1": "",
+    "date2": "1906"
+  },
+  {
+    "objectId1": 48765,
+    "objectId2": 623476,
+    "distance": 0.020335776470236433,
+    "department1": "Asian Art",
+    "department2": "European Sculpture and Decorative Arts",
+    "date1": "18th century",
+    "date2": "ca. 1690\u20131720"
+  },
+  {
+    "objectId1": 48635,
+    "objectId2": 718127,
+    "distance": 0.021677618806109522,
+    "department1": "Asian Art",
+    "department2": "The American Wing",
+    "date1": "late 17th\u2013early 18th century",
+    "date2": "ca. 1898\u20131918"
+  },
+  {
+    "objectId1": 19861,
+    "objectId2": 51154,
+    "distance": 0.022535390271338773,
+    "department1": "The American Wing",
+    "department2": "Asian Art",
+    "date1": "ca. 1896\u20131908",
+    "date2": "first half of the 19th century"
+  },
+  {
+    "objectId1": 42206,
+    "objectId2": 623475,
+    "distance": 0.023581489600673966,
+    "department1": "Asian Art",
+    "department2": "European Sculpture and Decorative Arts",
+    "date1": "18th century",
+    "date2": "ca. 1690\u20131720"
+  },
+  {
+    "objectId1": 187854,
+    "objectId2": 19862,
+    "distance": 0.025842623987649804,
+    "department1": "European Sculpture and Decorative Arts",
+    "department2": "The American Wing",
+    "date1": "Modern",
+    "date2": "ca. 1896\u20131908"
+  },
+  {
+    "objectId1": 42251,
+    "objectId2": 623467,
+    "distance": 0.025977081026108184,
+    "department1": "Asian Art",
+    "department2": "European Sculpture and Decorative Arts",
+    "date1": "mid-18th century",
+    "date2": "ca. 1690\u20131720"
+  },
+  {
+    "objectId1": 446217,
+    "objectId2": 51015,
+    "distance": 0.026062723532907617,
+    "department1": "Islamic Art",
+    "department2": "Asian Art",
+    "date1": "last quarter 11th or 12th century",
+    "date2": ""
+  },
+  {
+    "objectId1": 453244,
+    "objectId2": 52638,
+    "distance": 0.02629159189193564,
+    "department1": "Islamic Art",
+    "department2": "Asian Art",
+    "date1": "10th\u201311th century",
+    "date2": ""
+  },
+  {
+    "objectId1": 48704,
+    "objectId2": 623476,
+    "distance": 0.0279004726937242,
+    "department1": "Asian Art",
+    "department2": "European Sculpture and Decorative Arts",
+    "date1": "",
+    "date2": "ca. 1690\u20131720"
+  },
+  {
+    "objectId1": 770924,
+    "objectId2": 9524,
+    "distance": 0.027941143613792963,
+    "department1": "European Sculpture and Decorative Arts",
+    "department2": "The American Wing",
+    "date1": "ca. 1872",
+    "date2": "1880\u201390"
+  },
+  {
+    "objectId1": 42251,
+    "objectId2": 623475,
+    "distance": 0.02856440404717875,
+    "department1": "Asian Art",
+    "department2": "European Sculpture and Decorative Arts",
+    "date1": "mid-18th century",
+    "date2": "ca. 1690\u20131720"
+  },
+  {
+    "objectId1": 48480,
+    "objectId2": 9447,
+    "distance": 0.02925937454569416,
+    "department1": "Asian Art",
+    "department2": "The American Wing",
+    "date1": "",
+    "date2": "ca. 1895"
+  },
+  {
+    "objectId1": 46000,
+    "objectId2": 479830,
+    "distance": 0.02947614640467011,
+    "department1": "Asian Art",
+    "department2": "Modern and Contemporary Art",
+    "date1": "1820",
+    "date2": "ca. 1900"
+  },
+  {
+    "objectId1": 48773,
+    "objectId2": 623475,
+    "distance": 0.030042843830269006,
+    "department1": "Asian Art",
+    "department2": "European Sculpture and Decorative Arts",
+    "date1": "18th century",
+    "date2": "ca. 1690\u20131720"
+  },
+  {
+    "objectId1": 770924,
+    "objectId2": 9525,
+    "distance": 0.03154577390034441,
+    "department1": "European Sculpture and Decorative Arts",
+    "department2": "The American Wing",
+    "date1": "ca. 1872",
+    "date2": "1880\u201390"
+  },
+  {
+    "objectId1": 52047,
+    "objectId2": 9254,
+    "distance": 0.03192957134355778,
+    "department1": "Asian Art",
+    "department2": "The American Wing",
+    "date1": "",
+    "date2": "1830\u201370"
+  },
+  {
+    "objectId1": 42205,
+    "objectId2": 623475,
+    "distance": 0.03216580285160553,
+    "department1": "Asian Art",
+    "department2": "European Sculpture and Decorative Arts",
+    "date1": "18th century",
+    "date2": "ca. 1690\u20131720"
+  },
+  {
+    "objectId1": 57369,
+    "objectId2": 9317,
+    "distance": 0.032575033960625555,
+    "department1": "Asian Art",
+    "department2": "The American Wing",
+    "date1": "early 20th century",
+    "date2": "1882"
+  },
+  {
+    "objectId1": 52048,
+    "objectId2": 9254,
+    "distance": 0.032613300507917775,
+    "department1": "Asian Art",
+    "department2": "The American Wing",
+    "date1": "late 17th\u2013early 18th century",
+    "date2": "1830\u201370"
+  },
+  {
+    "objectId1": 50998,
+    "objectId2": 9254,
+    "distance": 0.032945382799698386,
+    "department1": "Asian Art",
+    "department2": "The American Wing",
+    "date1": "",
+    "date2": "1830\u201370"
+  },
+  {
+    "objectId1": 52060,
+    "objectId2": 9254,
+    "distance": 0.032969655142789156,
+    "department1": "Asian Art",
+    "department2": "The American Wing",
+    "date1": "",
+    "date2": "1830\u201370"
+  },
+  {
+    "objectId1": 47234,
+    "objectId2": 477748,
+    "distance": 0.037298230348537964,
+    "department1": "Asian Art",
+    "department2": "Medieval Art",
+    "date1": "first half of the 19th century",
+    "date2": "4th\u20137th century"
+  },
+  {
+    "objectId1": 19903,
+    "objectId2": 244729,
+    "distance": 0.04808371645272125,
+    "department1": "The American Wing",
+    "department2": "Greek and Roman Art",
+    "date1": "ca. 1898\u20131918",
+    "date2": "ca. 1600\u20131050 BCE"
+  },
+  {
+    "objectId1": 46114,
+    "objectId2": 571792,
+    "distance": 0.05618432600781331,
+    "department1": "Asian Art",
+    "department2": "Egyptian Art",
+    "date1": "1830",
+    "date2": "A.D. 2nd\u20133rd century"
+  },
+  {
+    "objectId1": 448397,
+    "objectId2": 471747,
+    "distance": 0.056401650025216465,
+    "department1": "Islamic Art",
+    "department2": "The Cloisters",
+    "date1": "17th century",
+    "date2": "16th century"
+  },
+  {
+    "objectId1": 186684,
+    "objectId2": 460173,
+    "distance": 0.0806891541186644,
+    "department1": "European Sculpture and Decorative Arts",
+    "department2": "Robert Lehman Collection",
+    "date1": "ca. 1520",
+    "date2": "ca. 1520\u201330"
+  },
+  {
+    "objectId1": 324136,
+    "objectId2": 43820,
+    "distance": 0.15051816466808043,
+    "department1": "Ancient Near Eastern Art",
+    "department2": "Asian Art",
+    "date1": "ca. 4500\u20134100 BCE",
+    "date2": ""
+  }
+]
